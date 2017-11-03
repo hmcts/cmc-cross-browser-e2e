@@ -24,7 +24,8 @@ timestamps {
         stage('Run cross browser tests') {
             env.INTEGRATION_TESTS_BRANCH = 'master'
             integrationTests.executeCrossBrowser([
-                'INTEGRATION_TESTS_VERSION': 'latest'
+                'INTEGRATION_TESTS_VERSION': 'latest',
+                'TESTS_TAG': '@quick'
             ])
         }
     }
