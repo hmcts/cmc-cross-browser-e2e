@@ -15,7 +15,7 @@ import uk.gov.hmcts.cmc.integrationtests.IntegrationTests
 IntegrationTests integrationTests = new IntegrationTests(env, this, "docker-compose.cross-browser.yml")
 
 timestamps {
-    node('moj_centos_large2') {
+    node {
         stage('Checkout') {
             deleteDir()
             checkout scm
